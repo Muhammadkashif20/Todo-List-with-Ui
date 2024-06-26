@@ -1,4 +1,5 @@
 var count=0
+var key=0
 function addBtn() {
     let inp=document.getElementById('inp').value
     let show=document.getElementById('show')
@@ -8,7 +9,8 @@ function addBtn() {
     <button id="delbtn" onclick="del()" class="bg-gray-200 w-[5rem] h-[6.8vh] rounded-r-md font-bold mr-[-.5rem] flex-shrink-0">Delete</button>
   </li>
 </ul>`
-localStorage.setItem('User Todo',inp)
+key++
+localStorage.setItem(`User Todo ${key}`,inp)
     show.style.display='block'
     count++
     document.getElementById('inp').value=''
